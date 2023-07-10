@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 export function Slider() {
   // code
-  // Begin by defining a method to describe a HSL
+  // Randomizing numbers at start of App.
   const [hueValue, hueSetValue] = useState<string | number>(
     Math.floor(Math.random() * 361)
   )
@@ -17,27 +17,27 @@ export function Slider() {
   const newBackgroundColor = `hsl(${hueValue},${saturationValue},${lightnessValue})`
   const newStyle = { backgroundColor: newBackgroundColor }
 
-  // Generate a function to randomize initial values of HSL
+  // Randomizing for use in the "random button" clickable
   function randomColor() {
     hueSetValue(Math.floor(Math.random() * 361))
     saturationSetValue(Math.floor(Math.random() * 101))
     lightnessSetValue(Math.floor(Math.random() * 101))
   }
 
-  //
+  // EVENT HANDLERS
   function handleHueValue(event: React.ChangeEvent<HTMLInputElement>) {
     hueSetValue(event.target.value)
-    console.log(hueSetValue)
+    console.log(event.target.value)
   }
 
   function handleSaturationValue(event: React.ChangeEvent<HTMLInputElement>) {
     saturationSetValue(event.target.value)
-    console.log(saturationValue)
+    console.log(event.target.value)
   }
 
   function handleLightnessValue(event: React.ChangeEvent<HTMLInputElement>) {
     lightnessSetValue(event.target.value)
-    console.log(lightnessValue)
+    console.log(event.target.value)
   }
 
   // code
@@ -46,13 +46,13 @@ export function Slider() {
       <header>
         <h1>Basic HSL color picker mini project!</h1>
         <div className="box" style={newStyle}>
-          <p>{newBackgroundColor} Check this out!</p>
+          <p>Check this color out: {newBackgroundColor}</p>
         </div>
         <h3>
           <button onClick={randomColor}>click2RANDOMize</button>
         </h3>
       </header>
-      <body>
+      <div className="body">
         <section>
           <input
             value={hueValue}
@@ -89,7 +89,7 @@ export function Slider() {
           />
           <label htmlFor="Lightness">L {lightnessValue}</label>
         </section>
-      </body>
+      </div>
     </div>
   )
 }
