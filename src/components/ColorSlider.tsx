@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 export function Slider() {
   // code
   // Begin by defining a method to describe a HSL
-  const [hueValue, hueSetValue] = useState<number>(
+  const [hueValue, hueSetValue] = useState<string | number>(
     Math.floor(Math.random() * 361)
   )
   const [saturationValue, saturationSetValue] = useState<string | number>(
@@ -22,6 +22,21 @@ export function Slider() {
     hueSetValue(Math.floor(Math.random() * 361))
     saturationSetValue(Math.floor(Math.random() * 101))
     lightnessSetValue(Math.floor(Math.random() * 101))
+  }
+
+  //
+  function handleHueValue(event: React.ChangeEvent<HTMLInputElement>) {
+    hueSetValue(event.target.value)
+    console.log(hueSetValue)
+  }
+
+  function handleSaturationValue(event: React.ChangeEvent<HTMLInputElement>) {
+    saturationSetValue(event.target.value)
+    console.log(saturationValue)
+  }
+
+  function handleLightnessValue(event: React.ChangeEvent<HTMLInputElement>) {
+    lightnessSetValue(event.target.value)
   }
 
   // code
