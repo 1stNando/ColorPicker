@@ -14,7 +14,7 @@ export function Slider() {
   )
 
   // Using string interpolation and inline style React code to represent the background color
-  const newBackgroundColor = `hsl(${hueValue},${saturationValue},${lightnessValue})`
+  const newBackgroundColor = `hsl(${hueValue},${saturationValue}%,${lightnessValue}%)`
   const newStyle = { backgroundColor: newBackgroundColor }
 
   // Randomizing for use in the "random button" clickable
