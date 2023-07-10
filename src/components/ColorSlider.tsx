@@ -66,7 +66,16 @@ export function Slider() {
           <label htmlFor="Hue"> H {hueValue}</label>
         </section>
         <section>
-          <input />
+          <input
+            value={saturationValue}
+            onChange={handleSaturationValue}
+            type="range"
+            id="Saturation"
+            name="Saturation"
+            min="0%"
+            max="100%"
+          />
+          <label htmlFor="Saturation">S {saturationValue}</label>
         </section>
       </body>
     </div>
