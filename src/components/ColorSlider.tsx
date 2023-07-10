@@ -46,7 +46,7 @@ export function Slider() {
       <header>
         <h1>Basic HSL color picker mini project!</h1>
         <div className="box" style={newStyle}>
-          <p>{newBackgroundColor}</p>
+          <p>{newBackgroundColor} Check this out!</p>
         </div>
         <h3>
           <button onClick={randomColor}>click2RANDOMize</button>
