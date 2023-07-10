@@ -37,6 +37,7 @@ export function Slider() {
 
   function handleLightnessValue(event: React.ChangeEvent<HTMLInputElement>) {
     lightnessSetValue(event.target.value)
+    console.log(lightnessValue)
   }
 
   // code
