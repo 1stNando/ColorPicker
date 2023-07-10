@@ -41,5 +41,34 @@ export function Slider() {
   }
 
   // code
-  return <div></div>
+  return (
+    <div>
+      <header>
+        <h1>Basic HSL color picker mini project!</h1>
+        <div className="box" style={newStyle}>
+          <p>{newBackgroundColor}</p>
+        </div>
+        <h3>
+          <button onClick={randomColor}>click2RANDOMize</button>
+        </h3>
+      </header>
+      <body>
+        <section>
+          <input
+            value={hueValue}
+            onChange={handleHueValue}
+            type="range"
+            id="Hue"
+            name="Hue"
+            min="0"
+            max="360"
+          />
+          <label htmlFor="Hue"> H {hueValue}</label>
+        </section>
+        <section>
+          <input />
+        </section>
+      </body>
+    </div>
+  )
 }
