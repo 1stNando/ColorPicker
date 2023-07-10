@@ -77,6 +77,18 @@ export function Slider() {
           />
           <label htmlFor="Saturation">S {saturationValue}</label>
         </section>
+        <section>
+          <input
+            value={lightnessValue}
+            onChange={handleLightnessValue}
+            type="range"
+            id="Lightness"
+            name="Lightness"
+            min="0%"
+            max="100%"
+          />
+          <label htmlFor="Lightness">L {lightnessValue}</label>
+        </section>
       </body>
     </div>
   )
