@@ -17,6 +17,13 @@ export function Slider() {
   const newBackgroundColor = `hsl(${hueValue},${saturationValue},${lightnessValue})`
   const newStyle = { backgroundColor: newBackgroundColor }
 
+  // Generate a function to randomize initial values of HSL
+  function randomColor() {
+    hueSetValue(Math.floor(Math.random() * 361))
+    saturationSetValue(Math.floor(Math.random() * 101))
+    lightnessSetValue(Math.floor(Math.random() * 101))
+  }
+
   // code
   return <div></div>
 }
